@@ -75,7 +75,7 @@ void busca(no *head){
     do{
         scanf("%s", &string);
             if((strlen(string)>15)){
-                printf("\nNome inválido. Max 15 chars.");
+                printf("\nNome invÃ¡lido. Max 15 chars.");
             }
         strlwr(string);
     }while(strlen(string)>15);
@@ -135,7 +135,7 @@ void insere(no *head){
         printf("\nNome: ");
         scanf("%s", &atual->Nome);
             if((strlen(atual->Nome)>15)){
-                printf("\nNome inválido. Max 15 chars.");
+                printf("\nNome invÃ¡lido. Max 15 chars.");
             }
         strlwr(atual->Nome);
     }while(strlen(atual->Nome)>15);
@@ -144,7 +144,7 @@ void insere(no *head){
         printf("\nEmail: ");
         scanf("%s", &atual->Email);
             if((strlen(atual->Nome)>15)){
-                printf("\nEmail inválido. Max 15 chars.");
+                printf("\nEmail invÃ¡lido. Max 15 chars.");
             }
     }while(strlen(atual->Nome)>15);
 
@@ -153,7 +153,7 @@ void insere(no *head){
         getchar();
         scanf("%d", &atual->Telefone);
             if(atual->Telefone > 9999999999){
-                printf("\nTelefone inválido. Max 10 chars.");
+                printf("\nTelefone invÃ¡lido. Max 10 chars.");
             }
     }while(atual->Telefone > 9999999999);
 
@@ -198,7 +198,7 @@ void edita(no *head){
         printf("Digite o novo nome:");
         scanf("%s", &lista->Nome);
             if((strlen(lista->Nome)>15)){
-                printf("\nNome inválido. Max 15 chars.");
+                printf("\nNome invÃ¡lido. Max 15 chars.");
             }
         strlwr(lista->Nome);
     }while(strlen(lista->Nome)>15);
@@ -207,7 +207,7 @@ void edita(no *head){
         printf("Digite o novo email:");
         scanf("%s", &lista->Email);
             if((strlen(lista->Nome)>15)){
-                printf("\nEmail inválido. Max 15 chars.");
+                printf("\nEmail invÃ¡lido. Max 15 chars.");
             }
     }while(strlen(lista->Nome)>15);
 
@@ -216,7 +216,7 @@ void edita(no *head){
         getchar();
         scanf("%d", &lista->Telefone);
             if(lista->Telefone > 9999999999){
-                printf("\nTelefone inválido. Max 10 chars.");
+                printf("\nTelefone invÃ¡lido. Max 10 chars.");
             }
     }while(lista->Telefone > 9999999999);
 
@@ -257,7 +257,6 @@ void remover(no *head){
         printf("\nTem certeza? [s/n]");
         getchar();
         scanf("%c", &letra);
-        printf("\nLetra1: %c", letra);
         if((letra=='s')||(letra=='S')){
             antes->prox = killer->prox;
             free(killer);
@@ -268,7 +267,6 @@ void remover(no *head){
         }else if((letra=='n')||(letra=='N')){
             return(0);
         }else{
-            printf("\nLetra2: %c", letra);
             printf("Letra invalida.");
             getchar();
             getchar();
